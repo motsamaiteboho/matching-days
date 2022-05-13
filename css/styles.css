@@ -2,6 +2,7 @@ body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.5em;
     background-color: #e9d8a6;
+    color: rgb(27, 1, 48);
 }
 
 .container{
@@ -25,6 +26,7 @@ h1 {
     width: 50%;
     margin: auto;
     justify-content: center;
+    padding-bottom: 1.5em;
 }
 .weekdays div {
    border: 1px solid black;
@@ -33,10 +35,16 @@ h1 {
 }
 
 .dates {
-    padding-left: 23%;
+    padding-left: 24%;
 }
 .dates div{
-    padding: 1em;
+    padding: 0.5em;
+}
+.first input[type=date]{
+    margin-left: 2.5em;
+}
+.second input[type=date]{
+    margin-left: 0.7em;
 }
 input[type=date]{ 
 	width: 20%;
@@ -45,11 +53,13 @@ input[type=date]{
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	box-sizing: border-box;
-    background-color: coral;
+    background-color: rgb(141, 6, 74);
+    font-size: 1em;
+    color: rgb(0, 207, 207);
 }
 
 .color1{
-    background-color: blueviolet;
+    background-color: rgb(226, 43, 43);
 }
 .color2 {
     background-color: chocolate;
