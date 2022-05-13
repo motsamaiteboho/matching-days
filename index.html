@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>MATCHING DAYS</h1>
+        <div class="weekdays">
+            <!-- <script type="text/x-template" class="userTemplate">
+                {{#each days}}
+                        {{#if day1 ==}}
+                            <div class = "color1">{{this}}</div>
+                        {{/else}}
+                            <div class = "color1">{{this}}</div>
+                        {{/if}}
+                {{/each}}
+            </script> -->
+            <div class="day">
+                Monday
+            </div>
+            <div class="day">
+                Tuesday
+            </div>
+            <div class="day">
+                Wednesday
+            </div>
+            <div class="day">
+                Thursday
+            </div>
+            <div class="day">
+                Friday
+            </div>
+            <div class="day">
+                Saturday
+            </div>
+            <div class="day">
+                Sunday
+            </div>
+        </div>
+
+        <div class="dates">
+            <div class="first">
+                <label for="first"> First date:
+                    <input type="date" name="firstdate" value="2022-05-13" id="first">
+                </label>
+            </div>
+            <div class="second">
+                <label for="second"> Second date:
+                    <input type="date" name="seconddate" value="2022-05-13" id="second">
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <script src="matchingdays.js" charset="utf-8"></script>
+    <script src="matchingdays-dom.js" charset="utf-8"></script>
+</body>
+
+</html>
