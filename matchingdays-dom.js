@@ -1,32 +1,28 @@
 const firstDate = document.getElementById("first");
 const secondDate = document.getElementById("second");
-const Elements = document.querySelectorAll(".day");
 
-const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-let day1 = "";
-let day2 = "";
+var matchingDays = MatchingDays();
 
 function fillFirstDate() {
-
-    const d = new Date(firstDate.value);
-    let day = weekdays[d.getDay()];
-    day1 = day;
-    changeColor(day1, day2);
+    matchingDays.setDay1Name(firstDate.value)
+    changeColor();
 }
 firstDate.addEventListener('change', fillFirstDate)
 
 function fillSecondDate() {
-    const d = new Date(secondDate.value);
-    let day = weekdays[d.getDay()];
-    day2 = day;
-    changeColor(day1, day2);
+    matchingDays.setDay2Name(secondDate.value)
+    changeColor();
 }
 secondDate.addEventListener('change', fillSecondDate)
 
 document.addEventListener('DOMContentLoaded', function () {
-    changeColor(day1, day2);
+    changeColor();
 });
-function changeColor(day1, day2) {
+
+function changeColor() {
+
+    let day1 = matchingDays.getDay1Name();
+    let day2 = matchingDays.getDay2Name();
 
     // get a reference to the template script tag
     var templateSource = document.querySelector(".userTemplate").innerHTML;
@@ -36,10 +32,12 @@ function changeColor(day1, day2) {
 
     // get a reference to tableBody where users is to be displayed
     var userDataElem = document.querySelector(".userData");
+
+    let weekdays = matchingDays.getWeekDays();
     var userData = {
         days: weekdays
     };
-
+    
     // compile the template
     var userDataHTML = userTemplate(userData);
     userDataElem.innerHTML = userDataHTML;
